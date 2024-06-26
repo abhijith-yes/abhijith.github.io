@@ -11,6 +11,7 @@ header {
     color: white;
     padding: 1em;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
@@ -19,10 +20,14 @@ header h1 {
 
 main {
     padding: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 section {
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-delay: 0.5s;
 }
 
 h2 {
@@ -60,4 +65,14 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

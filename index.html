@@ -11,6 +11,14 @@
         <h1>Abhijith S</h1>
         <p>Software Engineer | ML Research Engineer</p>
         <p><a href="mailto:abhijithyess@gmail.com">abhijithyess@gmail.com</a> | <a href="https://www.linkedin.com/in/abhijithyess/">LinkedIn</a></p>
+        <nav>
+            <a href="#objective">Objective</a> |
+            <a href="#education">Education</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#experience">Experience</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#leadership">Leadership</a>
+        </nav>
     </header>
     <main>
         <section id="objective">
@@ -87,5 +95,31 @@
     <footer>
         <p>&copy; 2024 Abhijith S</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+            smoothScrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
