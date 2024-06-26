@@ -7,11 +7,10 @@ body {
 }
 
 header {
-    background-color: #3b0152;
+    background-color: #4CAF50;
     color: white;
     padding: 1em;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
@@ -20,37 +19,19 @@ header h1 {
 
 main {
     padding: 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 section {
     margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #fff;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -70,20 +51,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-#canvas-container {
-    width: 100%;
-    height: 400px;
-    background-color: #000;
 }
