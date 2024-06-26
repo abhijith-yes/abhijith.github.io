@@ -81,3 +81,9 @@ footer {
         opacity: 1;
     }
 }
+
+#canvas-container {
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+}

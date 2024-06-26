@@ -3,123 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijith S - ML Engineer</title>
+    <title>Abhijith S - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Abhijith S</h1>
         <p>Software Engineer | ML Research Engineer</p>
-        <p><a href="mailto:abhijithyess@gmail.com">abhijithyess@gmail.com</a> | <a href="https://www.linkedin.com/in/abhijithyess/">LinkedIn</a></p>
         <nav>
-            <a href="#objective">Objective</a> |
-            <a href="#education">Education</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#experience">Experience</a> |
-            <a href="#projects">Projects</a> |
+            <a href="#objective">Objective</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#leadership">Leadership</a>
         </nav>
     </header>
     <main>
+        <div id="canvas-container"></div>
         <section id="objective">
             <h2>Objective</h2>
-            <p>As a Software Engineer with over 3 years of experience in Python development, I bring deep expertise in Machine Learning, particularly in advanced technologies such as Deep Neural Networks (DNNs), Reinforcement Learning, and Computer Vision. With a Google TensorFlow certification, I aim to leverage my specialized skills to contribute to innovative projects and drive technological advancements in a dynamic team environment.</p>
+            <p>As a Software Engineer with over 3 years of experience in Python development, I bring deep expertise in Machine Learning...</p>
         </section>
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Bachelor of Science, IIT Madras</strong> in Data Science (2021 - Present)</li>
-                <li><strong>Bachelor of Technology, Sree Chitra Thirunal College of Engineering</strong> (2013 - 2017)</li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>Python, C++, TensorFlow, PyTorch, NumPy, Pandas, MLlib, Scikit-learn, SciPy, and OpenCV</li>
-                <li>Assistant API with GPT, Prompt Engineering, and Natural Language Processing (NLP)</li>
-                <li>Custom DRL models, OpenAI GYM, ROS2, Isaac Sim, and Gazebo</li>
-                <li>Docker, AWS, and Azure AI, MongoDB, and PostgreSQL</li>
-            </ul>
-            <h3>Soft Skills</h3>
-            <ul>
-                <li>Teamwork, Problem-solving, Critical thinking, Adaptability, Leadership</li>
-            </ul>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <div>
-                <h3>ML Research Engineer</h3>
-                <p>Neoito, Kochi, India (Feb 2021 - Present)</p>
-                <ul>
-                    <li>Working in DNN, Reinforcement learning, Computer vision, and Robotics</li>
-                    <li>Expertise in engineering IoT solutions, leveraging Python programming, TensorFlow for machine learning, CUDA for parallel computing optimizations, and harnessing the computational power for edge computing applications</li>
-                    <li>Led the development and rigorous training of AI models for different platforms, achieving optimal accuracy and efficiency</li>
-                    <li>Designed and implemented a cutting-edge automation bot, seamlessly integrating GPT technologies with the Assistant API to boost performance</li>
-                </ul>
-            </div>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div>
-                <h3>Bodbx</h3>
-                <p>Developed an innovative smart IoT device leveraging advanced machine learning and computer vision algorithms to track workouts and predict performance metrics. Built using Python and TensorFlow, it runs on NVIDIA Jetson Nano for hardware and uses Firebase for seamless data management.</p>
-                <a href="https://bodbx.com/">Try it here</a>
-            </div>
-            <div>
-                <h3>Taylotek</h3>
-                <p>A product that combines software and hardware for anthropometric customization in the fashion industry. State-of-the-art Python solution that intakes body measurements and produces patterns through laser-assisted numerical cutting.</p>
-                <a href="https://www.taylotek.com/">Try it here</a>
-            </div>
-            <div>
-                <h3>Neobot</h3>
-                <p>Developed an automation bot to streamline the creation of job descriptions on Upwork, incorporating GPT technologies with the Assistant API for superior performance.</p>
-            </div>
-            <div>
-                <h3>Skoop</h3>
-                <p>Created an AI-driven Ingredient Monitoring System for a premier Canadian restaurant chain, significantly improving order precision and quality oversight, resulting in a substantial increase in monthly revenue.</p>
-            </div>
-            <div>
-                <h3>PassportGuard</h3>
-                <p>Led the creation of an AI-powered Passport Verification and Security Enhancement System for Indian Customs, markedly improving both security measures and operational efficiency.</p>
-            </div>
-        </section>
-        <section id="leadership">
-            <h2>Leadership</h2>
-            <ul>
-                <li>Ambassador of DeepLearning.AI</li>
-                <li>Mentor in RaSoR (Ramanujan Society Of Research)</li>
-            </ul>
-        </section>
+        <!-- Add other sections here -->
     </main>
     <footer>
         <p>&copy; 2024 Abhijith S</p>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-            smoothScrollLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>
