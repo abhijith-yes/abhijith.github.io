@@ -15,7 +15,7 @@ function copyFiles(src, dest) {
     const srcPath = path.join(src, item);
     const destPath = path.join(dest, item);
 
-    if (item !== 'dist' && item !== 'node_modules' && item !== 'package-lock.json') {
+    if (item !== 'dist' && item !== 'node_modules' && item !== 'package-lock.json' && item !== 'build.js') {
       if (fs.lstatSync(srcPath).isDirectory()) {
         copyFiles(srcPath, destPath);
       } else {
