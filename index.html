@@ -43,10 +43,15 @@
             padding: 10px 20px;
             border: 1px solid #ecf0f1;
             margin: 0 5px;
+            cursor: pointer;
         }
         .footer {
             margin-top: 40px;
             font-size: 14px;
+        }
+        #content {
+            margin-top: 40px;
+            text-align: left;
         }
     </style>
 </head>
@@ -60,15 +65,76 @@
         </div>
         <a href="#" class="cta">CONNECT TO STAY UPDATED WITH ML AND AI ADVANCEMENTS</a>
         <div class="nav">
-            <a href="#">ABOUT</a>
-            <a href="#">PROJECTS</a>
-            <a href="#">SKILLS</a>
-            <a href="#">EXPERIENCE</a>
-            <a href="#">CONTACT</a>
+            <a onclick="showContent('about')">ABOUT</a>
+            <a onclick="showContent('projects')">PROJECTS</a>
+            <a onclick="showContent('skills')">SKILLS</a>
+            <a onclick="showContent('experience')">EXPERIENCE</a>
+            <a onclick="showContent('contact')">CONTACT</a>
         </div>
+        <div id="content"></div>
     </div>
     <div class="footer">
         © 2024 ABHIJITH S | DESIGN: HTML5 UP | PHOTO BY [YOUR NAME] ON [PHOTO SOURCE]
     </div>
+
+    <script>
+        function showContent(section) {
+            const contentDiv = document.getElementById('content');
+            let content = '';
+
+            switch(section) {
+                case 'about':
+                    content = `
+                        <h2>About Me</h2>
+                        <p>As a Software Engineer with over 3 years of experience in Python development, I bring deep expertise in Machine Learning, particularly in advanced technologies such as Deep Neural Networks (DNNs), Reinforcement Learning, and Computer Vision. With a Google TensorFlow certification, I aim to leverage my specialized skills to contribute to innovative projects and drive technological advancements in a dynamic team environment.</p>
+                    `;
+                    break;
+                case 'projects':
+                    content = `
+                        <h2>Projects</h2>
+                        <h3>Bodbx</h3>
+                        <p>Developed an innovative smart IoT device leveraging advanced machine learning and computer vision algorithms to track workouts and predict performance metrics.</p>
+                        <h3>TAYLOTEK</h3>
+                        <p>A product that combines software and hardware for anthropometric customisation in fashion industry.</p>
+                        <h3>Neobot</h3>
+                        <p>Developed a groundbreaking automation bot designed to streamline the creation of job descriptions on Upwork, incorporating GPT technologies with the Assistant API for superior performance.</p>
+                    `;
+                    break;
+                case 'skills':
+                    content = `
+                        <h2>Skills</h2>
+                        <h3>Technical Skills</h3>
+                        <p>Python, C++, TensorFlow, PyTorch, NumPy, Pandas, MLlib, Scikit-learn, SciPy, and OpenCV. Assistant API with GPT, Prompt Engineering, and Natural Language Processing (NLP). Custom DRL models, OpenAI GYM, ROS2, Isaac Sim, and Gazebo. Docker, AWS, and Azure AI, MongoDB and PostgreSQL.</p>
+                        <h3>Soft Skills</h3>
+                        <p>Teamwork, Problem-solving, Critical thinking, Adaptability, Leadership.</p>
+                    `;
+                    break;
+                case 'experience':
+                    content = `
+                        <h2>Experience</h2>
+                        <h3>ML Research Engineer</h3>
+                        <p>Neoito, Kochi, India (Feb 2021 - Present)</p>
+                        <ul>
+                            <li>Working in DNN, Reinforcement learning, Computer vision and Robotics</li>
+                            <li>Acquired expertise in engineering Internet of Things (IoT) solutions</li>
+                            <li>Led the development and rigorous training of AI models for different platforms</li>
+                            <li>Designed and implemented a cutting-edge automation bot</li>
+                        </ul>
+                    `;
+                    break;
+                case 'contact':
+                    content = `
+                        <h2>Contact</h2>
+                        <p>Email: abhijithyess@gmail.com</p>
+                        <p>Phone: +91 9497514843</p>
+                        <p>Location: Kochi, India</p>
+                        <p>LinkedIn: <a href="#" style="color: #e74c3c;">LinkedIn Profile</a></p>
+                    `;
+                    break;
+            }
+
+            contentDiv.innerHTML = content;
+        }
+    </script>
 </body>
 </html>
